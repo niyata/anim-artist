@@ -141,3 +141,12 @@ function anim_export_option_keys( $keys ) {
 
 add_filter( 'cei_export_option_keys', 'anim_export_option_keys' );
 /** end import export customize tools */
+
+/* Add CPTs to author archives */
+function post_types_author_archives($query) {
+	if ($query->is_author)
+			// Add 'books' CPT and the default 'posts' to display in author's archive
+			$query->set( 'post_type', array('anim_project_name', 'posts') );
+	remove_action( 'pre_get_posts', 'custom_post_author_archive' );
+}
+add_action('pre_get_posts', 'post_types_author_archives');
