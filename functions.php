@@ -29,7 +29,7 @@ add_action( 'widgets_init', 'berry_remove_sidebar', 11 );
  */
 function berry_scripts() {
 
-	wp_dequeue_style( 'seed-style');
+	/*wp_dequeue_style( 'seed-style');*/
 	wp_enqueue_style( 'berry-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'berry-style', get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
 	wp_enqueue_script( 'berry-main', get_stylesheet_directory_uri() . '/js/main.js', array(), '2016-1', true );
@@ -129,3 +129,15 @@ function anim_proj_search($template)
 }
 add_filter('template_include', 'anim_proj_search');
 /** end searching */
+
+/** anim customize theme settings 
+ *  @see https://wordpress.org/plugins/customizer-export-import/
+*/
+function anim_export_option_keys( $keys ) {
+    $keys[] = 'anim_option_key';
+    $keys[] = 'another_option_key';
+    return $keys;
+}
+
+add_filter( 'cei_export_option_keys', 'anim_export_option_keys' );
+/** end import export customize tools */
