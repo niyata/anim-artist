@@ -17,7 +17,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array('before' => '<div class="page-links">' . esc_html__( 'Pages:', 'plant' ),'after'  => '</div>') ); ?>
+		<?php wp_link_pages( array('before' => '<div class="page-links">' . esc_html__( 'Pages:', 'anim-artist' ),'after'  => '</div>') ); ?>
 
 		<?php if($GLOBALS['s_blog_show_profile']) :?>
 			<div class="entry-author clearfix">
