@@ -32,10 +32,10 @@ $author->ID;
 					$id = get_the_ID();
 					$post_type = get_post_type($id);
 					if ($post_type == 'project') {
-						include(locate_template('parts/entry.php')); 
+						get_template_part( 'template-parts/content','card-excerpt');
 					}
 					else {
-						get_template_part( 'template-parts/content','card-excerpt');
+						include(locate_template('parts/entry.php')); 
 					} /** end achives */
 
 				if ((int)$GLOBALS['s_blog_columns'] > 1) {
