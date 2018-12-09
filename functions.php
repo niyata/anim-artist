@@ -91,40 +91,57 @@ if ( SITECOOKIEPATH != COOKIEPATH )
  * Anim Category private project_name taxonomy
  * @package animdata 
  */
-add_action( 'init', 'anim_private_proj_name_tax' );
+/** anim_private */
 
-function anim_private_proj_name_tax() {
-    register_taxonomy(
-        'vstar-movies-2558',
-        'anim_proj_label',
-        array(
-            'label' => __( 'vstar movies 2558' ),
-            'public' => false,
-            'rewrite' => false,
-            'hierarchical' => true,
-        )
-    );
-} /** anim_private */
 
-function my_acf_result_query( $args, $field, $post )
-{
-    // eg from https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
-    $args['post_status'] = 'private';        
-    return $args;
+/** Apps Custom post type none ACF */
+function anim_tax_apps_cptui() {
+
+	/**
+	 * Taxonomy: ชื่อโปรแกรม.
+	 */
+
+	$labels = array(
+		"name" => __( "ชื่อโปรแกรม", "" ),
+		"singular_name" => __( "ใส่ชื่อโปรแกรม", "" ),
+		"menu_name" => __( "ชื่อโปรแกรม", "" ),
+		"all_items" => __( "ชื่อโปรแกรมทั้งหมด", "" ),
+		"edit_item" => __( "แก้ไขชื่อโปรแกรม", "" ),
+		"view_item" => __( "ดูชื่อโปรแกรม", "" ),
+		"update_item" => __( "อัปเดตชื่อโปรแกรม", "" ),
+		"add_new_item" => __( "เพิ่มชื่อโปรแกรม", "" ),
+		"new_item_name" => __( "ชื่อโปรแกรมใหม่", "" ),
+		"parent_item" => __( "โยงชื่อโปรแกรมหลัก", "" ),
+		"parent_item_colon" => __( "ชื่อโปรแกรมหลัก:", "" ),
+		"search_items" => __( "ค้นหาชื่อโปรแกรม", "" ),
+		"popular_items" => __( "ชื่อโปรแกรมยอดนิยม", "" ),
+		"separate_items_with_commas" => __( "คั่นแต่ละชื่อด้วยเครื่องหมาย คอมม่า (โปรแกรม maya, photoshop,nuke..)", "" ),
+		"add_or_remove_items" => __( "เพิ่ม-ลบ ชื่อโปรแกรม", "" ),
+		"choose_from_most_used" => __( "เลือกจากชื่อโปรแกรมที่ใช้บ่อย", "" ),
+		"not_found" => __( "ไม่พบชื่อโปรแกรม", "" ),
+		"no_terms" => __( "ไม่มีชื่อโปรแกรม", "" ),
+		"items_list_navigation" => __( "ตัวนำทางรายการชื่อโปรแกรม", "" ),
+		"items_list" => __( "รายการชื่อโปรแกรม", "" ),
+	);
+
+	$args = array(
+		"label" => __( "ชื่อโปรแกรม", "" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable => true,
+		'hierarchical' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'anim-app-name', 'with_front' => true, ),
+		'show_admin_column' => true,
+		'show_in_rest' => false,
+		'rest_base" => "anim-app-name",
+		'rest_controller_class' => "WP_REST_Terms_Controller",
+		'show_in_quick_edit' => true,
+		);
+	register_taxonomy( "anim-app-name", array( "project" ), $args );
 }
-
-// acf/fields/relationship/result - filter for every field
-add_filter('acf/fields/relationship/query', 'my_acf_result_query', 10, 3);
-
-/** anim post type searching */
-function anim_proj_search($template)   
-{    
- global $wp_query;   
- $post_type = get_query_var('post_type');   
- if( isset($_GET['s']) && $post_type == 'project' )   
- {
-  return locate_template('archive-search.php');  //  redirect to archive-search.php
- }   
- return $template;   
-}
-add_filter('template_include', 'anim_proj_search');
+add_action( 'init', 'anim_tax_apps_cptui' );
+/**-- post type Anim App -- */
