@@ -129,24 +129,3 @@ function anim_proj_search($template)
 }
 add_filter('template_include', 'anim_proj_search');
 /** end searching */
-
-/** anim customize theme settings 
- *  @see https://wordpress.org/plugins/customizer-export-import/
-*/
-function anim_export_option_keys( $keys ) {
-    $keys[] = 'anim_option_key';
-    $keys[] = 'another_option_key';
-    return $keys;
-}
-
-add_filter( 'cei_export_option_keys', 'anim_export_option_keys' );
-/** end import export customize tools */
-
-/* Add CPTs to author archives */
-function post_types_author_archives($query) {
-	if ($query->is_author)
-			// Add 'books' CPT and the default 'posts' to display in author's archive
-			$query->set( 'post_type', array('project', 'post') );
-	remove_action( 'pre_get_posts', 'custom_post_author_archive' );
-}
-add_action('pre_get_posts', 'post_types_author_archives');
