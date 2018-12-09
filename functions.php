@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'berry_scripts' , 20 );
 define('ACF_EARLY_ACCESS','5');
 
 /**
- * Put icon before the post title by iWorn
+ * Put icon before the post title
  * you can create custom field for icon field by category taxonomy
  * @see https://www.engagewp.com/how-to-add-icon-before-post-title-wordpress/ and @see https://www.wp-tweaks.com/put-image-before-the-post-title-wordpress/
  */
@@ -145,8 +145,8 @@ add_filter( 'cei_export_option_keys', 'anim_export_option_keys' );
 /* Add CPTs to author archives */
 function post_types_author_archives($query) {
 	if ($query->is_author)
-			// Add 'books' CPT and the default 'posts' to display in author's archive
-			$query->set( 'post_type', array('project', 'post') );
+/** Add 'books' CPT and the default 'posts' to display in author's archive */
+	$query->set( 'post_type', array('project', 'post') );
 	remove_action( 'pre_get_posts', 'custom_post_author_archive' );
 }
 add_action('pre_get_posts', 'post_types_author_archives');
