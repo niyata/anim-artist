@@ -28,6 +28,16 @@ $author->ID;
 				</header><!--author-->
 
 				<?php 
+				/** get ACF Post type for author achives */
+					$id = get_the_ID();
+					$post_type = get_post_type($id);
+					if ($post_type == 'project') {
+						include(locate_template('parts/entry.php')); 
+					}
+					else {
+						get_template_part( 'template-parts/content','card-excerpt');
+					} /** end achives */
+
 				if ((int)$GLOBALS['s_blog_columns'] > 1) {
 					echo '<div class="seed-grid-'.$GLOBALS['s_blog_columns'].'">';
 					while ( have_posts() ) : the_post();
