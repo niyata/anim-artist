@@ -91,25 +91,7 @@ get_header(); ?>
 										echo '</td></tr>';
 									}
 								?>
-
-								<?php
-									$apps = get_the_terms( $post->ID , 'anim_tax_apps_cptui' );
-									// init counter
-									$i = 1;
-									echo '<tr><th>Apps</th><td>';							
-									foreach ( $apps as $term ) {
-									$term_link = get_term_link( $term, 'anim_tax_apps_cptui');
-									if( is_wp_error( $term_link ) )
-									continue;									
-									echo $term->name;
-									//  Add comma (except after the last theme)
-									echo ($i < count($apps))? " / " : "";
-									// Increment counter
-									$i++;
-									}
-									echo '</td></tr>';
-								?>
-
+								
 								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php the_field('color'); ?>;"></span></td></tr>
 								</table>
 						</div>
