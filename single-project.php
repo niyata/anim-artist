@@ -96,7 +96,7 @@ get_header(); ?>
 								<!-- add anim category icon -->
 								<?php if ( get_field( 'anim_category_icon') ) { ?>
 								<tr><th>Type</th><td><img src="<?php the_field( 'anim_category_icon' ); ?>" /></td></tr>
-								<?php } ?>
+								<?php } ?> <!-- anim icon -->
 								</table>
 						</div>
 					</div>
