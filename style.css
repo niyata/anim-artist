@@ -1,6 +1,6 @@
 /*
  Theme Name:   Anim Artist 1.0.2
- Description:  Plant Child Theme
+ Description:  Anim Artist's Portfolio Theme For Minimal Web Design, This is Plant Child Theme
  Author:       iWorn Studio
  Template:     plant
  Version:      1.0.2
@@ -230,7 +230,7 @@ td.stye-proj-name ul {
 	color: #888;
 }
 /*ขนาดหน้าจอ กว้างกว่า 992 ให้แสดงสีพื้นหลัง*/
-@media (max-width: 992px) {
+@media (min-width: 992px) {
 .site.-header-desktop-standard .site-header {
     height: auto;
 	position: absolute;
@@ -275,6 +275,15 @@ td.stye-proj-name ul {
 	
 	.site-title {
     font-family: "Cloud", sans-serif !important;
+	font-weight: 300 !important;
+	}
+}
+@media (max-width: 736px) {
+	/*แสดงช่องไฟ 15px เมื่อเปิดจาก iPhone 6 Plus*/
+	.content-item.-caption{
+	margin-bottom: 15px;
+	}
+	.site-title {
 	font-weight: 300 !important;
 	}
 }
