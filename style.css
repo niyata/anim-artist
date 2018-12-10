@@ -206,7 +206,7 @@ td.style-proj-name a:hover{
 
 table {
 	border-collapse: collapse;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	overflow: hidden;
   }
 table.table-bordered th, table.table-bordered tr, table.table-bordered td{ 

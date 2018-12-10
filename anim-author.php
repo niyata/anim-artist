@@ -32,7 +32,7 @@ $author->ID;
 					$id = get_the_ID();
 					$post_type = get_post_type($id);
 					if ($post_type == 'project') {
-						get_template_part( 'template-parts/content','card-excerpt');
+						include(locate_template('parts/entry.php')); 
 					}
 					else {
 						include(locate_template('parts/entry.php')); 

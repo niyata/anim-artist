@@ -145,3 +145,5 @@ function anim_tax_apps_cptui() {
 }
 add_action( 'init', 'anim_tax_apps_cptui' );
 /**-- post type Anim App -- */
+
+/** show acf cpt author page */
