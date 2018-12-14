@@ -1,7 +1,7 @@
-# ponlgnan
+# anim-artist
 Wordpress themes - Anim Showcase modify by iworn studio
 
-[![Build Status](https://travis-ci.org/niyata/ponlgnan.svg?branch=master)](https://travis-ci.org/niyata/ponlgnan)
+[![Build Status](https://travis-ci.org/niyata/anim-artist.svg?branch=master)](https://travis-ci.org/niyata/anim-artist)
 
 **Contributors:** the Animdata team  
 **Requires at least:** WordPress 4.9.6  
