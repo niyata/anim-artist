@@ -115,7 +115,7 @@ function anim_tax_apps_cptui() {
 		"parent_item_colon" => __( "ชื่อโปรแกรมหลัก:", "" ),
 		"search_items" => __( "ค้นหาชื่อโปรแกรม", "" ),
 		"popular_items" => __( "ชื่อโปรแกรมยอดนิยม", "" ),
-		"separate_items_with_commas" => __( "คั่นแต่ละชื่อด้วยเครื่องหมาย คอมม่า (โปรแกรม maya, photoshop,nuke..)", "" ),
+		"separate_items_with_commas" => __( "คั่นแต่ละชื่อด้วยเครื่องหมาย คอมม่า((ตย. -> Maya,Photoshop,Nuke,RealFlow)", "" ),
 		"add_or_remove_items" => __( "เพิ่ม-ลบ ชื่อโปรแกรม", "" ),
 		"choose_from_most_used" => __( "เลือกจากชื่อโปรแกรมที่ใช้บ่อย", "" ),
 		"not_found" => __( "ไม่พบชื่อโปรแกรม", "" ),
@@ -143,7 +143,17 @@ function anim_tax_apps_cptui() {
 		);
 	register_taxonomy( "anim-app-name", array( "project" ), $args );
 }
-add_action( 'init', 'anim_tax_apps_cptui' );
-/**-- post type Anim App -- */
+add_action( 'init', 'anim_tax_apps_cptui' ); /**-- post type Anim App -- */
 
-/** show acf cpt author page */
+/* Add CPTs to author archives 
+* @see https://gist.github.com/betodasilva/4ad7eb744a20b7599a66ff806fb77ee8 */
+function post_types_author_archives($query) {
+        if ($query->is_author)
+                // Add anim project by field 'project' CPT and the default 'posts' to display in author's archive 
+                $query->set( 'post_type', array('project', 'posts') );
+        remove_action( 'pre_get_posts', 'custom_post_author_archive' );
+    }
+    add_action('pre_get_posts', 'post_types_author_archives');
+/*author*/
+
+

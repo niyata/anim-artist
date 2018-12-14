@@ -1,0 +1,29 @@
+.site-footbar a:hover {
+	opacity: 0.8
+}
+.site-footbar a:active {
+	opacity: 0.6
+}
+.site-footbar .widget {
+	margin-bottom: 0
+}
+.site-footbar p:last-of-type{
+	margin-bottom: 0
+}
+.site-footer-space {
+	height: 40px;
+}
+.site-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	height: 40px;
+}
+.site-info {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 13px;
+	padding: 9px 0 0;
+	text-align: center;
+}

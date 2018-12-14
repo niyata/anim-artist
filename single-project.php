@@ -92,11 +92,10 @@ get_header(); ?>
 									}
 								?>
 								
+								<tr><th>Programs</th><td><span class="project-color" style="background-color: <?php get_field('anim_proj_asset'); ?>;"></span></td></tr>
 								<tr><th>Color</th><td><span class="project-color" style="background-color: <?php the_field('color'); ?>;"></span></td></tr>
-								<!-- add anim category icon -->
-								<?php if ( get_field( 'anim_category_icon') ) { ?>
-								<tr><th>Type</th><td><img src="<?php the_field( 'anim_category_icon' ); ?>" /></td></tr>
-								<?php } ?> <!-- anim icon -->
+                                
+								<!-- add anim app name --> <!-- anim app name-->
 								</table>
 						</div>
 					</div>

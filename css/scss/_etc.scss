@@ -1,0 +1,121 @@
+/* SiteOrigin Page Builder */
+.widget_sow-editor {
+	font-size: 1em;
+}
+.siteorigin-panels-stretch  {
+	margin-left: -1000px;
+	margin-right: -1000px;
+	padding-left: 1000px;
+	padding-right: 1000px;
+}
+.sow-headline h1,
+.sow-headline h2,
+.sow-headline h3,
+.sow-headline h4,
+.sow-headline h5,
+.sow-headline h6 {
+	margin: 15px 0;
+}
+.widget .sow-features-list .sow-features-feature h5{
+	font-size: 1.3em;
+	margin: 12px 0;
+}
+.panel-grid .widget-title {
+	font-size: 1.5em;
+	margin-bottom: 18px;
+}
+body .sow-carousel-wrapper ul.sow-carousel-items li.sow-carousel-item h3 {
+	font-size: 16px;
+}
+
+
+/* Widgets */
+
+.search-form {
+	width: 100%;
+	height: 30px;
+	max-width: 300px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);
+	background-color: #fff;
+	border-radius: 3px;
+	position: relative;
+	> label {
+		margin-bottom: 0;
+		width:100%;
+		&:after {
+			content: "\f002";
+			font-family: 'seed-icons' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			display: block;
+			position: absolute;
+			right: 10px;
+			top:8px;
+			z-index: 2;
+			color: rgba(0,0,0,0.4);
+			font-size: 14px;
+		}
+	}
+	.search-field {
+		width: calc(100% - 30px);
+		border: none;
+		background:none;
+		height: 30px;
+		padding: 0 6px 0 14px;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	.search-submit {
+		height: 30px;
+		background:none;
+		border: none;
+		width: 30px;
+		border-radius: 0;
+		color: transparent;
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		box-shadow: none !important;
+	}
+}
+.site-top-right .search-form {
+	max-width: 160px;
+}
+
+
+
+/* Jetpack */
+.infinite-scroll .content-pagination {
+	display: none;
+}
+
+/* Comments */
+.comment-list { list-style:none; margin-bottom: 20px; padding:0;border:1px solid #e2e2e2; border-bottom: none;}
+.comment-list .comment { border-bottom:1px solid #e2e2e2; padding:25px; background-color: #f8f8f8}
+.comment-list .vcard img.avatar {float: left; margin: 5px 12px 0 0;}
+.comment-list .vcard .says {display: none;}
+.comment-list .comment-metadata {font-size: 0.8em; line-height: 1.4em}
+.comment-list .comment-metadata:after {content: "";clear: both; display: block;margin-bottom: 15px}
+.comment-list .comment-metadata a {opacity: 0.8}
+.comment-list .children { list-style:none; margin:0; padding:0;}
+.comment-list .children .comment {border-bottom: none;padding-bottom: 0}
+.comment-respond {background-color: #eee;padding: 25px 25px 5px;margin-top: 20px;}
+.comment-respond label {display: block;margin: 0}
+.comment-form-comment {margin-bottom: 10px;}
+.comment-form-comment textarea { padding: 10px; width: 100%;border: 1px solid #ccc;}
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {width: 100%; border: 1px solid #ccc;padding: 3px 5px;}
+.form-submit input {background-color: #e4e4e4; border: 1px solid #ccc;padding: 6px 12px 5px;transition: 300ms;}
+.form-submit input:hover {background-color: #fff;}
+.form-submit input:active {background-color: #999;border: 1px solid #999;}
+@media (min-width:768px) {
+	.comment-form-author {float: left;width: 32%; margin-right: 2%}
+	.comment-form-email {float: left;width: 32%; margin-right: 2%}
+	.comment-form-url {float: left;width: 32%}
+}

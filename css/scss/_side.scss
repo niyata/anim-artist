@@ -1,0 +1,140 @@
+/* COLUMNS */
+@media (min-width:992px){	
+	.widget-area {
+		&.-leftbar, &.-shopbar{
+			float: left;
+			width: 20.51282051%;
+		}
+		&.-rightbar{
+			float: right;
+			width: 25.64102564%;
+		}
+	}
+	.content-area {
+		&.-leftbar, &.-shopbar{
+			float: right;
+			width: 79.48717949%;
+			padding-left: 30px;
+			padding-right: 0;
+		}
+		&.-rightbar {
+			float: left;
+			width: 74.35897436%;
+			padding-right: 30px;
+		}
+	}
+	.site.-shop-layout-leftbar .content-area.-shopbar {
+		float: right;
+		padding-left: 30px;
+		padding-right: 0;
+	}
+	.site.-shop-layout-rightbar .content-area.-shopbar {
+		float: left;
+		padding-right: 30px;
+		padding-left: 0;
+	}
+	.site.-shop-layout-full-width .content-area.-shopbar {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.site.-layout-boxed {
+		.content-area {
+			&.-leftbar{
+				float: right;
+				width: 76.59574468%;
+			}
+			&.-rightbar  {
+				float: left;
+				width: 76.59574468%;
+			}
+		}
+		.widget-area {
+			&.-leftbar{
+				float: left;
+				width: 23.40425532%;
+			}
+			&.-rightbar{
+				float: right;
+				width: 23.40425532%;
+			}
+		}
+	}
+
+	/* 3 COLUMNS */
+	.wrap-leftrightbar {
+		display: flex;
+		.content-area {
+			order: 2;
+			width: 58.97435898%;
+			padding: 0 10px;
+		}
+		.widget-area.-leftbar {
+			order: 1;
+			width: 20.51282051%;
+			padding-right:20px;
+		}
+		.widget-area.-rightbar {
+			order: 3;
+			width: 20.51282051%;
+			padding-left:20px;
+		}
+	}
+
+}
+
+
+/* WIDGET */
+.widget-area .current-menu-item > a{
+	font-weight: bold;
+}
+.widget-area .sub-menu {
+	padding-left: 12px;
+}
+.widget-title {
+	margin-bottom: 10px;
+}
+.widget-area .widget_nav_menu {
+	font-size: 18px;
+}
+.widget-area .widget_nav_menu li {
+	margin-bottom: 10px;
+}
+.widget-area .widget_nav_menu .sub-menu {
+	padding-top: 10px;
+}
+.widget-area .widget_nav_menu li:last-child{
+	margin-bottom: 0;
+}
+.widget-area .widget_siteorigin-panels-postloop .widget-title {
+	margin-bottom: 18px;
+}
+.widget-area .content-item.-list {
+	margin-bottom: 15px;
+}
+.widget-area .content-item.-list .info {
+	font-size: 12px;
+	padding-left: 0;
+}
+.widget-area .content-item.-list .entry-title{
+	margin-bottom: 4px;
+}
+.widget-area .content-item.-list .info .cat-links,
+.widget-area .content-item.-list .info .byline,
+.widget-area .content-item.-list .info .tags-links {
+	display: none;
+}
+
+@media (min-width:768px) {
+	.widget-area {
+		margin:0 0 30px;
+		padding: 30px 0 10px;
+	}
+}
+
+@media (min-width:992px){	
+	.widget-area {
+		border-top: none;
+		padding: 0
+	}	
+}

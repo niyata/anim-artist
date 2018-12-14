@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Maledpan';
+    src: url('../vendor/fonts/maledpan/maledpan-regular-webfont.eot');
+    src: url('../vendor/fonts/maledpan/maledpan-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../vendor/fonts/maledpan/maledpan-regular-webfont.woff2') format('woff2'),
+         url('../vendor/fonts/maledpan/maledpan-regular-webfont.woff') format('woff'),
+         url('../vendor/fonts/maledpan/maledpan-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font: 15px/1.5em sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, nav, .menu, .button, .price, ._heading{
+	font-family: "Maledpan",  sans-serif;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5{line-height: 1.3;margin: 0 0 0.8em;}
+h1{font-size: 1.8em;}
+h2{font-size: 1.6em;}
+h3{font-size: 1.4em;}
+h4{font-size: 16px;}
+h5{font-size: 14px;}
+hr {
+    width: 24%;
+    margin: 50px auto;
+    border-top: 2px solid #352a1e;
+    opacity: 0.4;
+}
